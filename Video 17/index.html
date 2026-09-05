@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element selector */
+        div{
+          /*  background-color: red; */
+        }
+        /* Class selector */
+        .red{
+            background-color: red;
+        }
+        /* ID selector */
+        #green{
+            background-color: green;
+        }
+        /* Direct Child selector */
+        div > p {
+            color: blue;
+            background-color: yellow;
+        }
+        /* Descendant selector */
+        div p {
+            color: green;
+            background-color: lightgray;
+        }
+        /* Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red">
+        I am div
+        <article>
+            <p>
+                I am a paragraph inside a div
+            </p>
+        </article>
+    </div>
+
+    <div id="green">
+        I am another div
+    </div>
+</body>
+</html>
