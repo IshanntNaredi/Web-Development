@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* specificity is 1 */
+        /* element selector */
+        h1 {
+            color: aqua;
+        }
+        /* specificity is 1 + 10 = 11 */
+        h1.yellow {
+            color: yellow !important;
+        }
+        /* specificity is 10 */
+        .cpurple{
+            color: purple;
+        }
+        /* specificity is 10 */ 
+        .cred{
+            color: red;
+        }
+        /* specificity is 10  */
+        /* attribute selector */
+        [data-x] {
+            background-color: black;
+        }
+          /* 1 + 10 + 10 + 10 + 10 = 41 */
+        a.harryclass.rohan-class[href]:hover {
+            color : blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="color: maroon" class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+</body>
+</html>
