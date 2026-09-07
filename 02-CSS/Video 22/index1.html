@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>CSS Sizing Unit</title>
+    <style>
+        html {
+            font-size: 12px;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border : 2px solid black;
+           
+            width : 80vw;
+            height: 10vh;
+            
+            margin: auto;
+            background-color: rgb(123, 153, 179);
+        }
+        .container{
+            box-sizing: border-box;
+            border : 2px solid black;
+            width : 80vw;
+            /* height : 80vh; */
+           min-height: 80vh;
+            margin : 23px auto;
+            /* font-size: 18px; */
+            background-color: rgb(123, 153, 179);
+        }
+        .container >  div{
+            /* font-size became 2 * size of root element (12px)*/
+            font-size: 2rem;
+            border:2px solid red;
+            /* 50% width of its parent */
+            width:50%;
+        }
+
+        .container > div > div {
+            border: 2px solid black;
+            width:50%;
+        }
+
+        .mycont {
+            border: 2px solid black;
+            box-sizing:border-box;
+            margin : 23px auto;
+            background-color: red;
+            color:beige;
+            font-size: 22px;
+            /*for mobile vmin is width and for pc vmin is usually
+            height*/
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is box.
+    </div>
+    <div class="container">
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum consectetur possimus accusantium! Quod odit, ad cumque deleniti nulla adipisci quam incidunt voluptate minus. Exercitationem, minus odio! Placeat dignissimos iste vel amet provident magnam facilis possimus rem! Eius earum nostrum cumque soluta consequuntur libero error porro!
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore culpa reiciendis porro reprehenderit numquam optio commodi voluptatem ad veniam fuga delectus, recusandae itaque deleniti odit velit harum unde totam. Beatae expedita recusandae porro repellendus neque, ab dolore! Dignissimos velit, ipsum eaque cumque in harum fugit?
+            </div>
+
+        </div>
+        <!-- Expand to see that this container expand its height lorem 999 -->
+    </div>
+    <div class="mycont">
+        I am another container.
+    </div>
+</body>
+</html>

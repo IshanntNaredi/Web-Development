@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>CSS Sizing Unit</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border : 2px solid black;
+           /* px sizing unit */
+            /* width : 233px; */
+            /* vw means viewport width */
+            /* horizontal scroll hides because it 
+            take appropiate width */
+            /* This means 80% width of my viewport*/
+            width : 80vw;
+            height: 10vh;
+            /* margin auto only works for block level element 
+            not for inline element eg. span (not works for this)*/
+            margin: auto;
+            background-color: rgb(123, 153, 179);
+        }
+        .container{
+            box-sizing: border-box;
+            border : 2px solid black;
+            width : 80vw;
+            height : 80vh;
+            /* margin shorted property -
+            To seperate horizontal and vertical margin */
+            margin : 23px auto;
+            font-size: 18px;
+            background-color: rgb(123, 153, 179);
+        }
+        .container p{
+            /*After commenting this line paragraph inherited 
+            property (font-size) now paragraph font-size became
+            16px;
+            /* font-size: 1em; */
+            /* Now font-size beacme 2 * inherited font-size*/
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is box.
+    </div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum consectetur possimus accusantium! Quod odit, ad cumque deleniti nulla adipisci quam incidunt voluptate minus. Exercitationem, minus odio! Placeat dignissimos iste vel amet provident magnam facilis possimus rem! Eius earum nostrum cumque soluta consequuntur libero error porro!</p>
+    </div>
+</body>
+</html>
