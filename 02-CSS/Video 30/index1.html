@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* Global variable declared in root */
+        :root {
+            --color: rgb(247, 121, 247);
+            --seccolor: rgb(234, 173, 246);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background-color: var(--color);
+        }
+
+        ul {
+            display:flex;
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 34px;
+        }
+
+        ul li:first-child {
+            /* because we override --color variable here 
+            so from now it act as local variable */
+            --color: rgb(163, 121, 247);
+           background-color: var(--color); 
+        }
+        .container {
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempore nisi aut vitae voluptates. Praesentium iste omnis, architecto dolor cumque ullam odio? Vero, maiores dolorum iusto sint libero commodi nesciunt cum quibusdam quam odio molestiae eaque quae rem vel, necessitatibus voluptate minima illo reiciendis tempora?
+    </div>
+</body>
+</html>
